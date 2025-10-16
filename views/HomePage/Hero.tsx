@@ -5,11 +5,10 @@ import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { media } from 'utils/media';
+import CalendlyEmbed from 'components/CalendlyEmbed';
 
 export default function Hero() {
-  const { setIsModalOpened } = useNewsletterModalContext();
 
   return (
     <HeroWrapper>
@@ -21,14 +20,10 @@ export default function Hero() {
           repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
         </Description>
         <CustomButtonGroup>
-          <Button onClick={() => setIsModalOpened(true)}>
-            Subscribe to the newsletter <span>&rarr;</span>
+          <Button>
+            <CalendlyEmbed /> <span>&rarr;</span>
           </Button>
-          <NextLink href="#whitepaper" passHref>
-            <Button transparent>
-              Features <span>&rarr;</span>
-            </Button>
-          </NextLink>
+
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>

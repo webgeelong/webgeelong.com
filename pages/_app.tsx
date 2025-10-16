@@ -14,7 +14,7 @@ import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
 import Navbar from 'components/Navbar';
 import NavigationDrawer from 'components/NavigationDrawer';
-import NewsletterModal from 'components/NewsletterModal';
+// import NewsletterModal from 'components/NewsletterModal';
 // import WaveCta from 'components/WaveCta';
 import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { NavItems } from 'types';
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
 
       <Providers>
-        <Modals />
+        {/* <Modals /> */}
         <Navbar items={navItems} />
         <TinaEditProvider
           editMode={
@@ -83,12 +83,12 @@ function Providers<T>({ children }: PropsWithChildren<T>) {
   );
 }
 
-function Modals() {
-  const { isModalOpened, setIsModalOpened } = useNewsletterModalContext();
-  if (!isModalOpened) {
-    return null;
-  }
-  return <NewsletterModal onClose={() => setIsModalOpened(false)} />;
-}
+// function Modals() {
+//   const { isModalOpened, setIsModalOpened } = useNewsletterModalContext();
+//   if (!isModalOpened) {
+//     return null;
+//   }
+//   return <NewsletterModal onClose={() => setIsModalOpened(false)} />;
+// }
 
 export default MyApp;
