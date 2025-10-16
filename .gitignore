@@ -39,3 +39,7 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Claude
+.claude
+CLAUDE.md
