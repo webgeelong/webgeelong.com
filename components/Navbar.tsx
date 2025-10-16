@@ -68,11 +68,9 @@ export default function Navbar({ items }: NavbarProps) {
   return (
     <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
       <Content>
-        <NextLink href="/" passHref>
-          <LogoWrapper>
-            <Logo file="/blue_no_bg.png" />
-          </LogoWrapper>
-        </NextLink>
+        <LogoLink href="/">
+          <Logo file="/blue_no_bg.png" />
+        </LogoLink>
         <NavItemList>
           {items.map((singleItem) => (
             <NavItem key={singleItem.href} {...singleItem} />
@@ -102,9 +100,7 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
 
   return (
     <NavItemWrapper outlined={outlined}>
-      <NextLink href={href} passHref>
-        <a>{title}</a>
-      </NextLink>
+      <NextLink href={href}>{title}</NextLink>
     </NavItemWrapper>
   );
 }
@@ -129,7 +125,7 @@ const HamburgerMenuWrapper = styled.div`
   }
 `;
 
-const LogoWrapper = styled.a`
+const LogoLink = styled(NextLink)`
   display: flex;
   margin-right: auto;
   text-decoration: none;
@@ -184,11 +180,12 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
 
 const Content = styled(Container)`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 `;
 
 const ColorSwitcherContainer = styled.div`
   width: 4rem;
   margin: 0 1rem;
+  margin-left: auto;
 `;

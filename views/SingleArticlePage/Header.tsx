@@ -13,7 +13,7 @@ interface HeaderProps {
 export default function Header({ title, formattedDate, imageUrl, readTime }: HeaderProps) {
   return (
     <HeaderContainer>
-      <ArticleImage src={imageUrl} />
+      <ArticleImage alt='' src={imageUrl} />
       <Title>{title}</Title>
       <DetailsContainer>
         {formattedDate} <MidDot /> {readTime}
@@ -49,7 +49,7 @@ const DetailsContainer = styled.div`
 const MidDot = styled.span`
   &::before {
     display: inline-block;
-    content: '\x000B7';
+    content: '\u00B7';
     margin: 0 0.6rem;
   }
 `;

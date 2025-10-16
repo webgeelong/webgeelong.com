@@ -34,7 +34,7 @@ const ArticleCardWrapper = styled.a`
   height: 45rem;
   max-width: 35rem;
   overflow: hidden;
-  text-decoration: none;
+  text-decoration: none !important;
   border-radius: 0.6rem;
   background: rgb(var(--cardBackground));
   cursor: pointer;

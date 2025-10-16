@@ -11,7 +11,7 @@ export default function Quote({ content, author, cite }: QuoteProps) {
   return (
     <Container>
       <Blockquote {...(cite && { cite })}>{content}</Blockquote>
-      <Caption>— {author}</Caption>
+      <Caption>&mdash; {author}</Caption>
     </Container>
   );
 }
@@ -19,7 +19,7 @@ export default function Quote({ content, author, cite }: QuoteProps) {
 const Container = styled.figure`
   border-left: 1px solid rgb(var(--secondary));
   padding: 3rem;
-  quotes: ${`"\\201c" "\\201d" "\\2018" "\\2019"`};
+  quotes: '"\u201C" "\u201D" "\u2018" "\u2019"';
   color: rgb(var(--secondary));
   margin-bottom: 3.7rem;
 
@@ -49,3 +49,4 @@ const Caption = styled.figcaption`
   font-size: 1.6rem;
   margin-top: 2.5rem;
 `;
+
