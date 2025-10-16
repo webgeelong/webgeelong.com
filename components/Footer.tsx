@@ -3,6 +3,7 @@ import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
+import Logo from './Logo';
 
 type SingleFooterListItem = { title: string; href: string };
 type FooterListItems = SingleFooterListItem[];
@@ -56,14 +57,16 @@ export default function Footer() {
           ))}
         </ListContainer> */}
         {/* Add a our logo center aligned */}
-
+        <div style={{ textAlign: 'center' }}>
+          <Logo file="/white_no_bg.png" />
+        </div>
         <BottomBar>
           <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
+            {/* <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
               <a>
                 <TwitterIcon size={50} round={true} />
               </a>
-            </NextLink>
+            </NextLink> */}
 
             <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
               <a>
@@ -71,13 +74,13 @@ export default function Footer() {
               </a>
             </NextLink>
 
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
+            {/* <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
               <a>
                 <LinkedinIcon size={50} round={true} />
               </a>
-            </NextLink>
+            </NextLink> */}
           </ShareBar>
-          <Copyright>&copy; Copyright {new Date().getFullYear()} My Saas Startup</Copyright>
+          <Copyright>&copy; Copyright {new Date().getFullYear()} Web Services Geelong</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
