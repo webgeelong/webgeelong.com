@@ -1,9 +1,7 @@
-import NextLink from 'next/link';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
-import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
 import { media } from 'utils/media';
 import CalendlyEmbed from 'components/CalendlyEmbed';
@@ -13,40 +11,42 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <CustomOverTitle>Web Development & AI Solutions for Modern Businesses</CustomOverTitle>
+        <Heading>Transform Your Business with Custom Web Solutions</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+          We build high-performance websites and intelligent AI agents that drive real business results.
+          From responsive web applications to automated workflows, we help businesses in Geelong and beyond
+          scale faster and work smarter with cutting-edge technology.
         </Description>
         <CustomButtonGroup>
           <Button>
             <CalendlyEmbed /> <span>&rarr;</span>
           </Button>
-
         </CustomButtonGroup>
       </Contents>
-      <ImageContainer>
-        <HeroIllustration />
-      </ImageContainer>
     </HeroWrapper>
   );
 }
 
 const HeroWrapper = styled(Container)`
   display: flex;
-  padding-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  min-height: 70vh;
 
   ${media('<=desktop')} {
-    padding-top: 1rem;
-    flex-direction: column;
-    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    min-height: 60vh;
   }
 `;
 
 const Contents = styled.div`
-  flex: 1;
-  max-width: 60rem;
+  max-width: 80rem;
+  text-align: center;
+  width: 100%;
 
   ${media('<=desktop')} {
     max-width: 100%;
@@ -55,31 +55,15 @@ const Contents = styled.div`
 
 const CustomButtonGroup = styled(ButtonGroup)`
   margin-top: 4rem;
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: flex-start;
-
-  svg {
-    max-width: 45rem;
-  }
-
-  ${media('<=desktop')} {
-    margin-top: 2rem;
-    justify-content: center;
-    svg {
-      max-width: 80%;
-    }
-  }
+  justify-content: center;
 `;
 
 const Description = styled.p`
   font-size: 1.8rem;
   opacity: 0.8;
   line-height: 1.6;
+  margin: 0 auto;
+  max-width: 70rem;
 
   ${media('<=desktop')} {
     font-size: 1.5rem;

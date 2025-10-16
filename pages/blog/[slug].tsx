@@ -206,13 +206,20 @@ const TextHighlight = styled.code`
   font-family: inherit;
 `;
 
+// Wrapper for Link component to handle MDX anchor tags
+const MDXLink = (props: any) => {
+  const { href, children } = props;
+  if (!href) return <>{children}</>;
+  return <Link href={href}>{children}</Link>;
+};
+
 const mdxComponents = {
   h2: SecondHeading,
   h3: ThirdHeading,
   p: Paragraph,
   br: Break,
   code: TextHighlight,
-  a: Link,
+  a: MDXLink,
   Image: ArticleImage,
   Link,
   Code,

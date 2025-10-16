@@ -8,7 +8,7 @@ interface OpenGraphHeadProps {
   date: string;
   description: string;
   tags: string;
-  author: string;
+  author?: string;
 }
 
 export default function OpenGraphHead(props: OpenGraphHeadProps) {

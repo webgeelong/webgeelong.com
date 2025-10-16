@@ -11,29 +11,26 @@ import { media } from 'utils/media';
 const TESTIMONIALS = [
   {
     companyLogoUrl: '/testimonials/company-logo-1.svg',
-    content: `Really good. I am so pleased with this product. I didn't even need training.`,
+    content: `Working with Web Geelong transformed our online presence. The team delivered a fast, beautiful website that increased our conversions by 180%. Highly recommend!`,
     author: {
-      name: 'Clyde Edwards',
-      title: 'Very Serious Man',
-      avatarUrl: '/testimonials/author-photo-1.jpeg',
+      name: 'Sarah Mitchell',
+      title: 'Owner, Geelong Artisan Collective',
     },
   },
   {
     companyLogoUrl: '/testimonials/company-logo-2.svg',
-    content: `It's really wonderful. I use saas product often. Thank You! Saas product has really helped our business.`,
+    content: `Professional, responsive, and results-driven. They built us a custom e-commerce platform that has become the backbone of our business. Worth every dollar.`,
     author: {
-      name: 'Jimmy Hunter',
-      title: 'Sigma Male University Graduate',
-      avatarUrl: '/testimonials/author-photo-2.jpeg',
+      name: 'James Chen',
+      title: 'CEO, Local Retail Group',
     },
   },
   {
     companyLogoUrl: '/testimonials/company-logo-3.svg',
-    content: `Since I invested in saas product I made over 100,000 dollars profits. It really saves me time and effort. saas product is exactly what our business has been lacking.`,
+    content: `The AI automation tools they developed saved us 20+ hours per week on manual tasks. Their technical expertise and business understanding is unmatched in the region.`,
     author: {
-      name: 'Marjorie Morgan',
-      title: 'Chief Chad Officer',
-      avatarUrl: '/testimonials/author-photo-3.jpeg',
+      name: 'Emma Rodriguez',
+      title: 'Operations Manager, Tech Solutions',
     },
   },
 ];
@@ -53,11 +50,8 @@ export default function Testimonials() {
                   width={200}
                   height={40}
                 />
-                <Content>“{singleTestimonial.content}”</Content>
+                <Content>"{singleTestimonial.content}"</Content>
                 <AuthorContainer>
-                  <AuthorImageContainer>
-                    <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={48} height={48} />
-                  </AuthorImageContainer>
                   <AuthorContent>
                     <AuthorName>{singleTestimonial.author.name}</AuthorName>
                     <AuthorTitle>{singleTestimonial.author.title}</AuthorTitle>
@@ -121,12 +115,14 @@ const Content = styled.blockquote`
 const AuthorContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const AuthorContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   font-size: 1.4rem;
 `;
 
@@ -136,11 +132,4 @@ const AuthorTitle = styled.p`
 
 const AuthorName = styled.p`
   font-weight: normal;
-`;
-
-const AuthorImageContainer = styled.div`
-  display: flex;
-  border-radius: 10rem;
-  margin-right: 1rem;
-  overflow: hidden;
 `;

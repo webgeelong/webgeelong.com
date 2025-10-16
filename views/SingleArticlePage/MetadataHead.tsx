@@ -5,11 +5,11 @@ import { EnvVars } from 'env';
 interface MetadataHeadProps {
   title: string;
   description: string;
-  author: string;
+  author?: string;
 }
 
 export default function MetadataHead(props: MetadataHeadProps) {
-  const { title, description, author } = props;
+  const { title, description, author = 'Web Geelong Team' } = props;
 
   return (
     <Head>

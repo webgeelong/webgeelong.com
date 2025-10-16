@@ -9,11 +9,11 @@ interface StructuredDataHeadProps {
   date: string;
   description: string;
   tags: string;
-  author: string;
+  author?: string;
 }
 
 export default function StructuredDataHead(props: StructuredDataHeadProps) {
-  const { slug, title, date, description, tags, author } = props;
+  const { slug, title, date, description, tags, author = 'Web Geelong Team' } = props;
 
   const currentSiteUrl = EnvVars.URL + 'blog/' + slug;
   const ogImageUrl = EnvVars.OG_IMAGES_URL + `${slug}.png`;

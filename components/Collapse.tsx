@@ -46,4 +46,6 @@ const Collapse = forwardRef<HTMLDivElement, PropsWithChildren<CollapseProps>>(
   },
 );
 
+Collapse.displayName = 'Collapse';
+
 export default Collapse;
