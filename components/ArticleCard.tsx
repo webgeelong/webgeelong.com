@@ -12,23 +12,21 @@ export interface ArticleCardProps {
 
 export default function ArticleCard({ title, slug, imageUrl, description }: ArticleCardProps) {
   return (
-    <NextLink href={'/blog/' + slug} passHref>
-      <ArticleCardWrapper className="article-card-wrapper">
-        <HoverEffectContainer>
-          <ImageContainer>
-            <NextImage src={imageUrl} layout="fill" objectFit="cover" alt={title} />
-          </ImageContainer>
-          <Content>
-            <Title>{title}</Title>
-            <Description>{description}</Description>
-          </Content>
-        </HoverEffectContainer>
-      </ArticleCardWrapper>
-    </NextLink>
+    <ArticleCardWrapper href={'/blog/' + slug} className="article-card-wrapper">
+      <HoverEffectContainer>
+        <ImageContainer>
+          <NextImage src={imageUrl} layout="fill" objectFit="cover" alt={title} />
+        </ImageContainer>
+        <Content>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+        </Content>
+      </HoverEffectContainer>
+    </ArticleCardWrapper>
   );
 }
 
-const ArticleCardWrapper = styled.a`
+const ArticleCardWrapper = styled(NextLink)`
   display: flex;
   flex-direction: column;
   height: 45rem;

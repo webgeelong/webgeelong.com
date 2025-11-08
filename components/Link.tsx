@@ -8,13 +8,13 @@ export interface LinkProps {
 
 export default function Link({ href, children }: PropsWithChildren<LinkProps>) {
   return (
-    <NextLink href={href} passHref>
-      <Anchor>{children}</Anchor>
-    </NextLink>
+    <StyledLink href={href}>
+      {children}
+    </StyledLink>
   );
 }
 
-const Anchor = styled.a`
+const StyledLink = styled(NextLink)`
   display: inline;
   width: fit-content;
   text-decoration: none;

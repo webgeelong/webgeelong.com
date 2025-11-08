@@ -11,26 +11,26 @@ import { media } from 'utils/media';
 const TESTIMONIALS = [
   {
     companyLogoUrl: '/testimonials/company-logo-1.svg',
-    content: `Working with Web Geelong transformed our online presence. The team delivered a fast, beautiful website that increased our conversions by 180%. Highly recommend!`,
+    content: `lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     author: {
-      name: 'Sarah Mitchell',
-      title: 'Owner, Geelong Artisan Collective',
+      name: 'John Doe',
+      title: 'CEO, Example Corporation',
     },
   },
   {
     companyLogoUrl: '/testimonials/company-logo-2.svg',
-    content: `Professional, responsive, and results-driven. They built us a custom e-commerce platform that has become the backbone of our business. Worth every dollar.`,
+    content: `lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     author: {
-      name: 'James Chen',
-      title: 'CEO, Local Retail Group',
+      name: 'John Doe',
+      title: 'CEO, Example Corporation',
     },
   },
   {
     companyLogoUrl: '/testimonials/company-logo-3.svg',
-    content: `The AI automation tools they developed saved us 20+ hours per week on manual tasks. Their technical expertise and business understanding is unmatched in the region.`,
+    content: `lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     author: {
-      name: 'Emma Rodriguez',
-      title: 'Operations Manager, Tech Solutions',
+      name: 'Abcd Efgh',
+      title: 'CEO, Example Corporation',
     },
   },
 ];
